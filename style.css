@@ -1,0 +1,130 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(0deg,#000814,#e0e1dd);
+    padding: 10px;
+}
+.todo-app{
+   max-width: 540px;
+    width: 100%;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+    background-color: #dfe0e3;
+    opacity: 80%;
+    
+}
+.todo-app h2{
+   color: rgb(19, 19, 19) ; 
+   display: flex ;
+   align-items: center;
+   margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.addnew{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    border: 2px rgb(255, 255, 255) solid;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;   
+    outline: none;
+    padding: 15px 50px;
+    background: #1d1b1b;
+    color: whitesmoke;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+button:hover{
+background-color: #555;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    user-select: none;
+   position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(images/unchecked2.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+    
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/checked2.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    color: #555;
+    border-radius: 20px;
+}
+ul li span:hover{
+    background: #c3c4c5;
+    border-radius: 20px;
+}
+footer{
+    position: fixed;    /* Stick the footer to the bottom */
+    bottom: 0;          /* Align it at the bottom */
+    left: 0;
+    width: 100%;        /* Make the footer span the full width of the page */
+    text-align: center; /* Center the text horizontally */
+    padding: 10px 0;    /* Add some padding for height */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visual effect */
+    color: #9c9c9c;
+}
